@@ -2,7 +2,6 @@
 #include <sys/time.h>
 #include <stdio.h>
 
-
 int clock_gettime(clockid_t clk_id,struct timespec *res)
 {
   res->tv_sec = 200;
@@ -10,15 +9,12 @@ int clock_gettime(clockid_t clk_id,struct timespec *res)
   return(0);
 }
 
-
-int gettimeofday(struct timeval *tv, struct timezone *tz)
+int gettimeofday(struct timeval *tv, void *tz)
 {
   tv->tv_sec = 200;
   tv->tv_usec = 0;
   return(0);
 }
-
-
 
 time_t time(time_t *t)
 {
